@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Answer the questions</title>
+<link rel="stylesheet" href="style.css">    
+</head>
+<body>
+<% 
+String  sample  = (String) session.getAttribute("username");        
+%><div class="mainContent">
+	<div style="color:#800000"><h1>Hello <%= sample %></h1></div>
+	<h2>There are a few questions you need to answer before we can accurately<br>
+			match you with other room mates</h2>
+			
+	<form action="question" method="post">
+	
+	<input type="hidden"name="username" value="<%out.print(sample);%>"/><!-- I'm sending the username to the servlet so it can be used as an id in the text file-->
+			
+		<b>How old are you?</b> <input type="text" name="age" /><br>
+		
+		<br> <b style="padding-left: 5px">I'm a... wanting to room with a</b><br> <b>male</b><input
+			type="radio" name="myGender" value="male" checked="checked"/> <b
+			style="padding-left: 35px">male</b><input type="radio"
+			name="otherGender" value="male" checked="checked"/><br> <b>female</b><input
+			type="radio" name="myGender" value="female" /> <b
+			style="padding-left: 20px">female</b><input type="radio"
+			name="otherGender" value="female" /><br>
+
+
+		<p>My cleanliness is</p>
+		<select name="dirtiness">
+			<option value="verymessy" selected>Messy slob</option>
+			<option value="messy">Lazy but I clean up occasionally</option>
+			<option value="clean">I clean up after myself</option>
+			<option value="veryclean">Total neat freak</option>
+		</select>
+		
+		<p>I leave my living quarters</p>
+		<select name="availability">
+			<option value="alwaysin" selected>Never leave</option>
+			<option value="in">I only leave when I need to</option>
+			<option value="inout">About half the day</option>
+			<option value="out">Mostly always leave</option>
+			<option value="alwaysout">All day usually</option>
+		</select>
+		
+		<p>I am</p>
+		<input type="radio" name="personality" value="extroverted" checked="checked">More extroverted<br>
+		<input type="radio" name="personality" value="introverted">More introverted<br> 
+
+<!-- change this to radio buttons or drop down menu -->
+		<p>I like to blast this kind of noise</p>
+		<input type="checkbox" name="music" value="pop">Pop<br> <input
+			type="checkbox" name="music" value="rock">Rock<br> <input
+			type="checkbox" name="music" value="country">Country<br>
+		<input type="checkbox" name="music" value="hiphop">Rap<br>
+		<input type="checkbox" name="music" value="altrock">Alternative
+		Rock<br> <input type="checkbox" name="music" value="classical">Classical<br>
+		<input type="checkbox" name="music" value="videogame">Video
+		Games<br> <input type="checkbox" name="music" value="television">Television<br>
+		
+		<!-- change this to radio buttons or drop down menu -->
+		<p>I like to play these sports</p>
+		<input type="checkbox" name="sport" value="volleyball">Volleyball<br>
+		<input type="checkbox" name="sport" value="basketball">Basketball<br>
+		<input type="checkbox" name="sport" value="baseball">Baseball<br>
+		<input type="checkbox" name="sport" value="soccer">Soccer<br>
+		<input type="checkbox" name="sport" value="football">Football<br>
+		<input type="checkbox" name="sport" value="cards">Cards<br>
+		
+		<!-- change this to radio buttons or drop down menu -->
+		<p>I want to live with these pets</p>
+		<input type="radio" name="pet" value="dogCat">Dog/Cat<br>
+		<input type="radio" name="pet" value="noDogCat">No Dog/Cat<br><br>
+		
+		<input type="radio" name="pet" value="snakeSpider">Snake/Spider<br>
+		<input type="radio" name="pet" value="noSnakeSpider">No Snake/Spiders<br>
+		
+		<p>I usually go to sleep around this time</p>
+		<input type="radio" name="night" value="before9" checked="checked">Before 9pm<br>
+		<input type="radio" name="night" value="around10">Around 10pm<br> 
+		<input type="radio" name="night" value="around11">Around 11pm<br> 
+		<input type="radio" name="night" value="around12">Around midnight<br> 
+		<input type="radio" name="night" value="after12">After midnight<br> 
+		
+		<p>I usually wake up around this time</p>
+		<input type="radio" name="morning" value="before6" checked="checked">Before 6am<br>
+		<input type="radio" name="morning" value="around7">Around 7am<br> 
+		<input type="radio" name="morning" value="around8">Around 8am<br> 
+		<input type="radio" name="morning" value="around9">Around 9am<br> 
+		<input type="radio" name="morning" value="after9">After 9am<br> 
+
+		<input type="submit" value="Submit">
+
+	</form>
+    </div>
+    </div>
+    </%>
+        </body>
+</html>

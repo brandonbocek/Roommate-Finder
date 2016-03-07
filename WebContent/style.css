@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+.mainContent{
+	marign-top:50px;
+	margin-left: 25%;
+	marign-right: 25%;
+    margin-bottom:100px;
+    background-color: aqua;
+    width:50%;
+    box-shadow: 25px 25px 10px #d3d3d3
+    
+}
+body{
+	text-align:center;
+    background-color: aquamarine;
+}
+
+#helloUser{
+	text-align:left;
+}
+
+#usernameIn{
+	border-radius:10px;
+	padding-top:10px;
+	font-size:28px;
+}

@@ -1,0 +1,4 @@
+kate,33,female,male,verymessy,alwaysin,introverted,quiet,allGame,dogCat,noSnakeSpider,around12,around9,Kate,sample@email.com
+sam,0,male,male,verymessy,alwaysin,extroverted,loud,noGame,dogCat,snakeSpider,before9,before6,full name,sample@email.com
+icecream,0,male,male,verymessy,alwaysin,extroverted,loud,noGame,dogCat,snakeSpider,before9,before6,full name,sample@email.com
+null,0,male,male,verymessy,alwaysin,extroverted,loud,noGame,dogCat,snakeSpider,before9,before6,full name,sample@email.com
